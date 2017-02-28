@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>@import url('https://fonts.googleapis.com/css?family=Roboto');</style>
+  <title>Arrow functions examples</title>
+</head>
+<body style='background-color:rgb(166, 203, 181);'>
+
+  <p style='font-family:Roboto;text-align:center;font-size:3em;color:rgba(14, 24, 7, 0.8);' id='my-name-is'>name goes here</p>
+
+<script>
+const race = '100m Dash';
+const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+
+const ages = [23,62,45,234,2,62,234,62,34];
+
+const old = ages.filter(age => age >= 60);
+console.log(old);
+
+</script>
+</body>
+</html>

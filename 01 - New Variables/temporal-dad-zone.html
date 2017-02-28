@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let and const real world</title>
+</head>
+<body>
+  <h1>ES6</h1>
+<script>
+<!--
+- Temporal dead zone = you cannot access a variable before it has been defined
+-->
+
+  const pizza = 'Deep Dish 🍕🍕🍕! Bread crumbs';
+  console.log(pizza);
+
+  const slices = pizza.split('')
+  console.log(slices)
+
+
+  const letters = pizza.replace(/([^A-Za-z])/g, '')
+
+  function styleHyphenFormat(propertyName) {
+    function upperToHyphenLower(match, offset, string) {
+      return (offset ? '-' : '') + match.toLowerCase();
+    }
+    return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
+  }
+
+  console.log(styleHyphenFormat(letters))
+</script>
+</body>
+</html>
