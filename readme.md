@@ -23,11 +23,22 @@ Wes and Jason say...
   - only use `let` if rebinding is needed
   - (`var` shouldn't be used)
 
+##Section 02
 ### Video 06
 Arrow functions - 3 main benefits...
   - more concise
   - implicit returns (1 liners easy)
-  - doesn't rebind `this` when you use inside another function (e.g. in click handlers)
+  - doesn't re-bind `this` when you use inside another function (e.g. in click handlers)
+
+- When to use () and when it's unnecessary
+- Arrow functions are anonymous functions and so don't leave a very good stack trace.
+
+### Video 07
+- implicit return with an object literal
+
+### Video 08
+- `this` keyword does NOT get reboud in arrow functions
+- 
 
 
 

@@ -61,7 +61,18 @@
   </div>
 
   <script>
-    const box = document.querySelector('.box');
+    const box = document.querySelector('.box')
+    box.addEventListener('click', function() {
+      console.log(this)
+    })
+
+
+  </script>
+
+</body>
+</html>
+
+<!--     const box = document.querySelector('.box');
     box.addEventListener('click', function() {
       let first = 'opening';
       let second = 'open';
@@ -76,7 +87,4 @@
         this.classList.toggle(second);
       }, 500);
     });
-  </script>
-
-</body>
-</html>
+ -->
