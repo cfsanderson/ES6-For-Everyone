@@ -7,19 +7,24 @@
 
 ### Video 02
 - Cannot redeclare a `let` variable in the same scope the way you can with `var`
-- `const` cannot be changed (as in "constant") but it's properties CAN be updated.
+- A `const` variable cannot be changed (as in "constant") but it's properties CAN be updated.
+
+### Video 03
+- an IIFE (Immediately-Invoked Function Expression) which is a function that runs before anything else and prevents variables leaking (e.g. `var name = "Caleb"`) is not necessary any longer since `let` and `const` are block scoped. Simply put them in brackets.
+- in a `for` loop if you use `var i = 0` var is overwritten every time it loops so after the last iteration, if you call `i` (which has leaked out btw) then it will be equal the result of it's last loop. `let` does not do this.
 
 ### Video 04
-Temporal dead zone = you cannot access a variable before it has been defined
+Temporal dead zone = you cannot access a variable before it has been defined.
 
-### Video 0
+### Video 05
 when to use `var`/`let`/`const`
+Wes and Jason say...
   - use `const` by default
   - only use `let` if rebinding is needed
   - (`var` shouldn't be used)
 
 ### Video 06
-Arrow functions - 3 main reasons to use...
+Arrow functions - 3 main benefits...
   - more concise
   - implicit returns (1 liners easy)
   - doesn't rebind `this` when you use inside another function (e.g. in click handlers)
