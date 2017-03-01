@@ -34,11 +34,12 @@ Arrow functions - 3 main benefits...
 - Arrow functions are anonymous functions and so don't leave a very good stack trace.
 
 ### Video 07
-- implicit return with an object literal
+- implicit return with an object literal by wrapping the return in parens
 
 ### Video 08
-- `this` keyword does NOT get reboud in arrow functions
-- 
+- `this` does NOT get rebound to the parent scope with arrow functions - it DOES with standard named functions. 
+  - e.g. in a click handler on a `<div>` the arrow func is still bound to the window and NOT the parent `<div>`. May be better to use a `function() {do stuff}`
+  - if
 
 
 

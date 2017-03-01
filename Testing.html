@@ -1,3 +1,51 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        min-height: 100%;
+        margin: auto;
+      }
+
+      .different {
+        background-color: rgb(44, 44, 48);
+        color: rgb(179, 175, 195);
+      }
+
+      .normal {
+        background-color: rgb(202, 212, 204);
+        color: rgb(27, 36, 29);
+      }
+
+    </style>
+  </head>
+  <body class='body normal'>
+    <h1 id='header'>Testing Zone</h1>
+  <script>
+
+    const body = document.querySelector('.body')
+    // have to use standard function here b/c arrow function does NOT rebind this and stays at WINDOW
+    body.addEventListener('click', function() {
+
+    })
+
+    // add click handler to body
+    // change the background color and text color by fading
+
+  </script>
+  </body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +66,7 @@
     }
 
     .box {
-      background:black url(https://unsplash.it/1500/1500?image=560&blur=0.5) center fixed no-repeat;
+      background:black url(http://i.imgur.com/FRnzcBL.jpg) center fixed no-repeat;
       width:50px;
       height:50px;
       padding:50px;
@@ -34,7 +82,7 @@
     .box h2 {
       position: absolute;
       width:100%;
-      font-size: 100px;
+      font-size: 75px;
       transform:translateX(-200%);
       transition: all 0.5s;
       top:0;
@@ -46,6 +94,7 @@
       transform:translateX(200%);
       transition: all 0.5s;
       bottom:0;
+      font-size: 2em;
     }
 
     .box.open > * {
@@ -55,8 +104,8 @@
 
   <div class="wrap">
     <div class="box">
-      <h2>Wes Bos</h2>
-      <p class="social">@wesbos</p>
+      <h2>Caleb Frost Sanderson</h2>
+      <p class="social">@cfsanderson</p>
     </div>
   </div>
 
