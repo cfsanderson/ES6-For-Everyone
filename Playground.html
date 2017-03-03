@@ -9,11 +9,24 @@ button:active {color: red;}
 
 <body>
 
-  <p id="demo"></p>
-  <p id="face"></p>
-  <input type='text' placeholder='yaw'></input><button>Submit</button></br>
-  <input type='text' placeholder='pitch'></input><button>Submit</button></br>
-  <input type='text' placeholder='roll'></input><button>Submit</button></br>
+  <p>The face id is: <span id="face-id"></span></p>
+  <ul>
+    <li>yaw = <span id="yaw"></span></li>
+    <li>pitch = <span id="pitch"></span></li>
+    <li>roll = <span id="roll"></span></li>
+  </ul>
+
+  <input type='text' placeholder='yaw' id='yaw-input'></input>
+  <button onclick='myFuncYaw()'>Submit</button></br>
+
+  <input type='text' placeholder='pitch' id='pitch-input'></input>
+  <button onclick='myFuncPitch()'>Submit</button></br>
+
+  <input type='text' placeholder='roll' id='roll-input'></input>
+  <button onclick='myFuncRoll()'>Submit</button></br>
+
+  <button onclick='myFuncTotal()'>TOTAL</button></br>
+  <h1 id='total'></h1>
 
 <script>
 
@@ -24,16 +37,31 @@ function orientation(yaw, pitch, roll) {
 }
 
 let face = {"faceResults": {"faceId": "0"}}
+let totalArray = []
 
-let myFather = new person("Dale", "Sanderson", 78, "hazel", "chips")
+document.getElementById('face-id').innerHTML = `${face.faceResults.faceId}`
 
-let moves = new orientation(1, 2, 3)
+function myFuncYaw() {
+  document.getElementById('yaw').innerHTML = document.getElementById('yaw-input').value
+}
 
-document.getElementById('demo').innerHTML = `My father is ${myFather.firstName} ${myFather.lastName}, and he has ${myFather.eyeColor} colored eyes. He also likes to eat potato ${myFather.food}!`
+function myFuncPitch() {
+  document.getElementById('pitch').innerHTML = document.getElementById('pitch-input').value
+}
 
-document.getElementById('face').innerHTML = `the robot with the face ID of ${face.faceResults.faceId} has a yaw of ${moves.yaw}, a pitch of ${moves.pitch}, and a roll of ${moves.roll}`
+function myFuncRoll() {
+  document.getElementById('roll').innerHTML = document.getElementById('roll-input').value
+  let rollValue = document.getElementById('roll').value
+  totalArray.push(rollValue)
+  console.log(totalArray)
+  document.getElementById('roll-input').reset()
+}
 
-
+function myFuncTotal() {
+  let total = totalArray.reduce((acc, val) => {return acc + val}, 0)
+  document.getElementById('total').innerHTML = total
+  console.log(total)
+}
 
 </script>
 
