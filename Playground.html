@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+button {color: white; background-color: green;}
+button:active {color: red;}
+
+</style>
+
+<body>
+
+  <p id="demo"></p>
+  <p id="face"></p>
+  <input type='text' placeholder='yaw'></input><button>Submit</button></br>
+  <input type='text' placeholder='pitch'></input><button>Submit</button></br>
+  <input type='text' placeholder='roll'></input><button>Submit</button></br>
+
+<script>
+
+function orientation(yaw, pitch, roll) {
+	this.yaw = yaw
+  this.pitch = pitch
+  this.roll = roll
+}
+
+let face = {"faceResults": {"faceId": "0"}}
+
+let myFather = new person("Dale", "Sanderson", 78, "hazel", "chips")
+
+let moves = new orientation(1, 2, 3)
+
+document.getElementById('demo').innerHTML = `My father is ${myFather.firstName} ${myFather.lastName}, and he has ${myFather.eyeColor} colored eyes. He also likes to eat potato ${myFather.food}!`
+
+document.getElementById('face').innerHTML = `the robot with the face ID of ${face.faceResults.faceId} has a yaw of ${moves.yaw}, a pitch of ${moves.pitch}, and a roll of ${moves.roll}`
+
+
+
+</script>
+
+</body>
+</html>
