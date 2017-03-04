@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Default Arguments</title>
+  <style media="screen">
+    body {background-color: rgb(32, 30, 30);}
+    h1 {color: #bada55;}
+  </style>
 </head>
 <body>
+
+  <h1 onclick={console.log('Ouch')}>Default Function Arguments</h1>
+
 <script>
+
   function calculateBill(total, tax = 0.13, tip = 0.15) {
-    return total + (total * tax) + (total * tip);
+    // Used to do...
+    // if(tax === undefined) {
+    //   tax = 0.13
+    // }
+    // if(tip === undefined) {
+    //   tip = 0.15
+    // }
+
+    // OR another tricky/hacky way...
+    // tip = tip || 0.13
+    // tax = tax || 0.15
+      return total + (total * tax) + (total * tip)
   }
 
-  const totalBill = calculateBill(100, undefined, 0.25);
-  console.log(totalBill);
+  const totalBill = calculateBill(100, undefined, 0.25)
+  console.log(`Your total bill is: $${totalBill}`);
+  document.querySelector('h1').innerHTML = `Your total bill is: $${totalBill}`
+
 </script>
 </body>
 </html>
+
+
+<!-- function calculateBill(total, tax = 0.13, tip = 0.15) {
+  return total + (total * tax) + (total * tip);
+}
+
+const totalBill = calculateBill(100, undefined, 0.25);
+console.log(totalBill); -->

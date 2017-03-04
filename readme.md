@@ -37,11 +37,14 @@ Arrow functions - 3 main benefits...
 - implicit return with an object literal by wrapping the return in parens
 
 ### Video 08
-- `this` does NOT get rebound to the parent scope with arrow functions - it DOES with standard named functions. 
+- `this` does NOT get rebound to the parent scope with arrow functions - it DOES with standard named functions.
   - e.g. in a click handler on a `<div>` the arrow func is still bound to the window and NOT the parent `<div>`. May be better to use a `function() {do stuff}`
-  - if
 
+### Video 09 - Default Arguments
+- will set default amounts for arguments in functions.
+- order matters so if specific arguments are not passed it will return `undefined`
+- if you want to skip passing a custom argument when defaults are present, pass `undefined` and will fall back to default
 
-
+s
 
 ![ES6 for Everyone](https://es6.io/images/es6-facebook-share.png?cool=yah)
