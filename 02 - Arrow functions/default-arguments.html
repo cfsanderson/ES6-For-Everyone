@@ -26,9 +26,11 @@
     // OR another tricky/hacky way...
     // tip = tip || 0.13
     // tax = tax || 0.15
+
       return total + (total * tax) + (total * tip)
   }
 
+// you can't leave a "hole" in second argument so since the default will fall back if it is passed undefined, simply, explicitly, and intentionally pass it UNDEFINED so that it will fall back to the 0.13 tax rate.
   const totalBill = calculateBill(100, undefined, 0.25)
   console.log(`Your total bill is: $${totalBill}`);
   document.querySelector('h1').innerHTML = `Your total bill is: $${totalBill}`

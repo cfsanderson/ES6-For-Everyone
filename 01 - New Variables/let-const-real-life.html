@@ -7,8 +7,14 @@
 <body>
   <h1>let and const in the real world</h1>
 <script>
+// This is an IIFE statement that runs before anything else and makes variables that are reserved for the Window function scoped so that they don't leak out.
+// (function() {
+//   var name = 'wes'
+// })();
+
+// let and const are block-scoped so all that is necessary is to
   {
-    const name = 'wes';
+    const name = 'Caleb';
     console.log(name);
   }
 

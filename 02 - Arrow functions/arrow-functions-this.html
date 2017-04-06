@@ -61,6 +61,7 @@
   </div>
 
   <script>
+// can't use an arrow function at top level function b/c the value of THIS is not rebound it is inherited from the parent function. In this case that would return WINDOW instead of BOX.... ergo use ordinary function().
     const box = document.querySelector('.box')
     box.addEventListener('click', function() {
       let first = 'opening'
@@ -71,6 +72,8 @@
       }
 
       this.classList.toggle(first)
+      
+// here we DO have to use an arrow function because regular function does not get rebound and would return WINDOW which is NOT what we want.
       setTimeout(() => {
         console.log(this.classList)
         this.classList.toggle(second)
